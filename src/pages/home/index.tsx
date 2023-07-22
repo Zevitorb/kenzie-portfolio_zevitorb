@@ -1,15 +1,15 @@
 // Styles
-import { Container } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container } from "@/styles/Global"
+import { Text } from "@/styles/Text"
+import { Button } from "@/styles/Buttons"
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
+import { Stack } from "@/components/Stack"
+import { Project } from "@/components/Project"
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stackData } from "@/utils/stackData"
+import { userData } from "@/utils/userData"
 
 // Page Style
 import {
@@ -22,8 +22,7 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
-} from "./style";
-
+} from "./style"
 
 export const Home = (): JSX.Element => {
   return (
@@ -35,9 +34,20 @@ export const Home = (): JSX.Element => {
               Criando experiências por meio da tecnologia{" "}
             </Text>
             <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
-              desenvolvendo habilidades
+              Em busca de uma realização profissional já fiz de tudo, desde
+              servente de pedreiro a auxiliar administrativo. Até meus 20 anos
+              trabalhei em empresa de família, onde já exerci alguns cargos como
+              administrativo, comercial, estoquista, representante externo e
+              sempre que precisava ajuda em qualquer setor. Seguinte a isso eu
+              fui trabalhar em uma imobiliária de Blumenau, onde adquiri uma boa
+              experiência como corretor de imóveis de aluguel, desenvolvendo
+              mais organização e compromisso devido aos clientes. Hoje sinto que
+              encontrei o meu objetivo de vida na programação. Sou uma pessoa
+              pró-ativa e sou de fácil convívio, sempre buscando novas amizades,
+              então nunca tive problemas por onde passei. Atualmente estou
+              estudando Desenvolvimento Web Full Stack na Kenzie Academy, onde
+              já passei por tecnologias como HTML, CSS e Javascript, Typescript,
+              React.Js, Next.Js, Node, Python, Django, Express e continuando...
             </Text>
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
@@ -100,5 +110,5 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
     </main>
-  );
-};
+  )
+}

@@ -4,24 +4,24 @@ import {
   ProjectStackTech,
   ProjectLink,
   ProjectLinks,
-} from "./style";
+} from "./style"
 
-import { Text } from "@/styles/Text";
-import { useEffect, useState } from "react";
-import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
+import { Text } from "@/styles/Text"
+import { useEffect, useState } from "react"
+import { FaGithub, FaShare } from "react-icons/fa"
+import { userData } from "@/utils/userData"
 
 interface ReposType {
-  id: number;
-  name: string;
-  language: string;
-  description: string;
-  html_url: string;
-  homepage: string;
+  id: number
+  name: string
+  language: string
+  description: string
+  html_url: string
+  homepage: string
 }
 
 export const Project = (): JSX.Element => {
-  const [repositories, setRepositories] = useState<ReposType[]>([]);
+  const [repositories, setRepositories] = useState<ReposType[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,18 +29,18 @@ export const Project = (): JSX.Element => {
         `https://api.github.com/users/${userData.githubUser}/repos`
       )
 
-      const json = await data.json();
+      const json = await data.json()
 
-      setRepositories(json);
+      setRepositories(json)
 
       if (!data.ok) {
-        throw data;
+        throw data
       }
 
-      return json;
-    };
-    fetchData();
-  }, []);
+      return json
+    }
+    fetchData()
+  }, [])
 
   return (
     <>
@@ -82,5 +82,5 @@ export const Project = (): JSX.Element => {
         </ProjectWrapper>
       ))}
     </>
-  );
-};
+  )
+}
