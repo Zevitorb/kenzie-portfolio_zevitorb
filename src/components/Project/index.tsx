@@ -75,7 +75,6 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </Text>
-          <button onClick={() => console.log(repository.language)}>AQUI</button>
 
           {repository.language && (
             <ProjectStack>
