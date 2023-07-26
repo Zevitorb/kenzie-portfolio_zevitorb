@@ -31,6 +31,16 @@ export const Project = (): JSX.Element => {
 
       const json = await data.json()
 
+      json.forEach(async (element: any) => {
+        const language: Response = await fetch(
+          `https://api.github.com/repos/Zevitorb/${element.name}/languages`
+        )
+        const languageJson = await language.json()
+        element.language = Object.keys(languageJson)[0]
+      })
+
+      console.log(json)
+
       setRepositories(json)
 
       if (!data.ok) {
@@ -41,6 +51,17 @@ export const Project = (): JSX.Element => {
     }
     fetchData()
   }, [])
+
+  // const getLanguage = async (repname: string) => {
+  //   const language: Response = await fetch(
+  //     `https://api.github.com/repos/Zevitorb/${repname}/languages`
+  //   )
+
+  //   const json = language.json()
+  //   const language_return = Object.keys(json)[0]
+
+  //   return language_return
+  // }
 
   return (
     <>
@@ -54,6 +75,7 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </Text>
+          <button onClick={() => console.log(repository.language)}>AQUI</button>
 
           {repository.language && (
             <ProjectStack>
